@@ -8,9 +8,9 @@ def test_print_slavic_title():
         'Nevidljivi heroji Grčke'
         )
     assert MarcRecords('setout5.mrc').print_slavic_title() == expected
-    
-    
-def test_all_titles_and_labels():
+
+#@pytest.mark.skip
+def test_all_keys():
     expected = (
         'SYSNUM:99188878199206381'"\t"
         'FMT:BK'"\t"
@@ -24,4 +24,5 @@ def test_all_titles_and_labels():
         'ARRIVAL_DATE:2025-03-25'"\t"
         'ISBN:9788675871262'
         )
-    assert MarcRecords('setout5.mrc').all_titles_and_labels() == expected
+    assert MarcRecords('setout5.mrc').all_keys() == expected
+
